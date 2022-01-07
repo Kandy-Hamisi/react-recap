@@ -27,7 +27,7 @@ function App() {
     // gets contact from the AddContact component
     const addContactHandler = (contact) => {
       console.log(contact);
-      setContacts([...contacts,{id: uuid(), ...contacts}]);
+      setContacts([...contacts, { id: uuid(), ...contact}]);
     };
 
     const removeContactHandler = (id) => {
@@ -49,7 +49,7 @@ function App() {
     useEffect(() => {
       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts));
       
-    }, [contacts])
+    }, [contacts]);
 
     return (
 
