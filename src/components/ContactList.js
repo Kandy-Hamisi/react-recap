@@ -22,7 +22,7 @@ const ContactList = (props) => {
             <ContactCard
              contact={contact} 
              clickHandler={deleteContactHandler}
-             key={contact.id}/>
+             key={contact.id} />
         )
     });
     return (
